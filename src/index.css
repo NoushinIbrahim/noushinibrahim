@@ -1,0 +1,368 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* ✅ Default Transparent Glass Look */
+.custom-navbar {
+  background: rgba(0, 0, 0, 0.815);
+  backdrop-filter: blur(12px);
+  transition: 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ✅ Scroll hone par solid dark */
+.custom-navbar.scrolled {
+  background: #0f0f14;
+  backdrop-filter: none;
+}
+
+/* ✅ LOGO Gradient */
+.tech-logo {
+  font-size: 26px;
+  font-weight: 600;
+  background: linear-gradient(to right, #4aa3ff, #f3c77b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+/* ✅ Nav Links */
+.custom-link {
+  color: #cccccc !important;
+  font-size: 15px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.custom-link:hover {
+  color: white !important;
+}
+
+/* ✅ Underline Animation */
+.custom-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to right, #4aa3ff, #f3c77b);
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.custom-link:hover::after {
+  width: 100%;
+}
+
+/* ✅ Mobile toggler white */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.navtech-gradient {
+  font-size: 26px;                /* size tum apni marzi ka rakh sakti ho */
+  font-weight: 600;
+  background: linear-gradient(
+    to right,
+    #4aa3ff,   /* blue */
+    #89d6c1,   /* teal/green */
+    #e0c176,   /* beige-yellow */
+    #e88b3d    /* orange */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Background GIF */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../public/bg.gif") center/cover no-repeat;
+  z-index: -2;
+}
+
+
+/* Dark gradient overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.87);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+/* Text Content */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  /* NEW: Center horizontally + vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Content ko center text align bhi karo */
+.hero-content {
+  max-width: 700px;
+  color: #fff;
+  text-align: center; /* NEW */
+}
+
+
+.small-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Gradient Heading */
+.main-heading {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #4C6FFF, #22D3EE, #FF9F5F);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.85;
+}
+
+/* Gradient Button */
+.hero-btn {
+  padding: 13px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(90deg, #4C6FFF, #FF9F5F);
+  transition: 0.2s;
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+}
+
+.zoom-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.zoom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomIn 10s ease-in-out infinite;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.testimonial-card {
+  width: 68%;
+  max-width: 1100px;
+  margin: 0 auto 50px auto;
+  background: #1a1b22;
+  padding: 70px 80px;
+  border-radius: 28px;
+  display: flex;
+  
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Left Text Section */
+.testimonial-text {
+  width: 80%;
+}
+
+.testimonial-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+
+  background: linear-gradient(90deg, #86d9ff, #f4b073);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.testimonial-quote {
+  color: #a8b0bd;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  max-width: 90%;
+}
+
+.testimonial-user {
+  color: #7e889a;
+  font-size: 1rem;
+}
+
+/* Right Circular Image */
+.testimonial-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.95;
+}
+
+/* SECTION BACKGROUND */
+.testimonial-section {
+  background: #0e0f14;
+  padding: 120px 0;
+}
+
+.hero-section {
+  min-height: 100vh;
+  background:
+    linear-gradient(to right,
+      rgba(0, 0, 0, 0.92),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.hero-title {
+  font-size: 70px;
+  font-weight: 300;
+  background: linear-gradient(to right, #4aa3ff, #f3c77b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title span {
+  font-weight: 500;
+}
+
+.hero-text {
+  max-width: 600px;
+  color: #cfcfcf;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.hero-icons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.hero-icons span {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-icons span:hover {
+  background: white;
+  color: black;
+}
+
+.footer-section {
+  background: linear-gradient(to right, #1a1a22, #0f0f14);
+  padding: 25px 0;
+  margin-top: 0;
+}
+
+.footer-section p {
+  margin: 0;
+  color: #8c8c8c;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding-left: 20px;
+    height: 90vh;
+  }
+
+  .main-heading {
+    font-size: 40px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
